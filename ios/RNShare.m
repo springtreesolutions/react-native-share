@@ -144,6 +144,10 @@ RCT_EXPORT_METHOD(open:(NSDictionary *)options
     }
 
     NSMutableArray<id> *items = [NSMutableArray array];
+    NSString *title = [RCTConvert NSString:options[@"title"]];
+    if (title) {
+        [items addObject:title];
+    }
     NSString *message = [RCTConvert NSString:options[@"message"]];
     if (message) {
         [items addObject:message];
