@@ -144,9 +144,9 @@ RCT_EXPORT_METHOD(open:(NSDictionary *)options
     }
 
     NSMutableArray<id> *items = [NSMutableArray array];
-    NSString *title = [RCTConvert NSString:options[@"title"]];
-    if (title) {
-        [items addObject:title];
+    NSString *activityTitle = [RCTConvert NSString:options[@"title"]];
+    if (activityTitle) {
+        [items addObject:activityTitle];
     }
     NSString *message = [RCTConvert NSString:options[@"message"]];
     if (message) {
